@@ -1,0 +1,690 @@
+{
+  "contractName": "SecureTargetMock",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "checkInvariant",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060a58061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e79487da146044575b600080fd5b348015604f57600080fd5b5060566070565b604051808215151515815260200191505060405180910390f35b600060019050905600a165627a7a72305820eb1c96789953690817667bb6ec100cfdee69d2bbc1fcf9801caf16411a1589ef0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e79487da146044575b600080fd5b348015604f57600080fd5b5060566070565b604051808215151515815260200191505060405180910390f35b600060019050905600a165627a7a72305820eb1c96789953690817667bb6ec100cfdee69d2bbc1fcf9801caf16411a1589ef0029",
+  "sourceMap": "88:111:19:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;88:111:19;;;;;;;",
+  "deployedSourceMap": "88:111:19:-;;;;;;;;;;;;;;;;;;;;;;;;128:69;;8:9:-1;5:2;;;30:1;27;20:12;5:2;128:69:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;169:4;188;181:11;;128:69;:::o",
+  "source": "pragma solidity ^0.4.18;\n\n\nimport {Bounty, Target} from \"../../contracts/Bounty.sol\";\n\n\ncontract SecureTargetMock is Target {\n  function checkInvariant() public returns(bool) {\n    return true;\n  }\n}\n\ncontract SecureTargetBounty is Bounty {\n  function deployContract() internal returns (address) {\n    return new SecureTargetMock();\n  }\n}\n",
+  "sourcePath": "F:\\smartContract\\crowdsale\\contracts\\mocks\\SecureTargetBounty.sol",
+  "ast": {
+    "absolutePath": "/F/smartContract/crowdsale/contracts/mocks/SecureTargetBounty.sol",
+    "exportedSymbols": {
+      "SecureTargetBounty": [
+        1709
+      ],
+      "SecureTargetMock": [
+        1696
+      ]
+    },
+    "id": 1710,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1682,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:19"
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/Bounty.sol",
+        "file": "../../contracts/Bounty.sol",
+        "id": 1685,
+        "nodeType": "ImportDirective",
+        "scope": 1710,
+        "sourceUnit": 100,
+        "src": "27:58:19",
+        "symbolAliases": [
+          {
+            "foreign": 1683,
+            "local": null
+          },
+          {
+            "foreign": 1684,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1686,
+              "name": "Target",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 99,
+              "src": "117:6:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Target_$99",
+                "typeString": "contract Target"
+              }
+            },
+            "id": 1687,
+            "nodeType": "InheritanceSpecifier",
+            "src": "117:6:19"
+          }
+        ],
+        "contractDependencies": [
+          99
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1696,
+        "linearizedBaseContracts": [
+          1696,
+          99
+        ],
+        "name": "SecureTargetMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1694,
+              "nodeType": "Block",
+              "src": "175:22:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1692,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "188:4:19",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1691,
+                  "id": 1693,
+                  "nodeType": "Return",
+                  "src": "181:11:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1695,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "checkInvariant",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1688,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:2:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1691,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1690,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1695,
+                  "src": "169:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1689,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "169:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "168:6:19"
+            },
+            "scope": 1696,
+            "src": "128:69:19",
+            "stateMutability": "nonpayable",
+            "superFunction": 98,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1710,
+        "src": "88:111:19"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1697,
+              "name": "Bounty",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 93,
+              "src": "232:6:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Bounty_$93",
+                "typeString": "contract Bounty"
+              }
+            },
+            "id": 1698,
+            "nodeType": "InheritanceSpecifier",
+            "src": "232:6:19"
+          }
+        ],
+        "contractDependencies": [
+          93,
+          1407,
+          1696,
+          1765,
+          1852
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1709,
+        "linearizedBaseContracts": [
+          1709,
+          93,
+          1407,
+          1765,
+          1852
+        ],
+        "name": "SecureTargetBounty",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1707,
+              "nodeType": "Block",
+              "src": "296:40:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1704,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "309:20:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_SecureTargetMock_$1696_$",
+                        "typeString": "function () returns (contract SecureTargetMock)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 1703,
+                        "name": "SecureTargetMock",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1696,
+                        "src": "313:16:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_SecureTargetMock_$1696",
+                          "typeString": "contract SecureTargetMock"
+                        }
+                      }
+                    },
+                    "id": 1705,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "309:22:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SecureTargetMock_$1696",
+                      "typeString": "contract SecureTargetMock"
+                    }
+                  },
+                  "functionReturnParameters": 1702,
+                  "id": 1706,
+                  "nodeType": "Return",
+                  "src": "302:29:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1708,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "deployContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1699,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:2:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1702,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1701,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1708,
+                  "src": "287:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1700,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:9:19"
+            },
+            "scope": 1709,
+            "src": "243:93:19",
+            "stateMutability": "nonpayable",
+            "superFunction": 57,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1710,
+        "src": "201:137:19"
+      }
+    ],
+    "src": "0:339:19"
+  },
+  "legacyAST": {
+    "absolutePath": "/F/smartContract/crowdsale/contracts/mocks/SecureTargetBounty.sol",
+    "exportedSymbols": {
+      "SecureTargetBounty": [
+        1709
+      ],
+      "SecureTargetMock": [
+        1696
+      ]
+    },
+    "id": 1710,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1682,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:19"
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/Bounty.sol",
+        "file": "../../contracts/Bounty.sol",
+        "id": 1685,
+        "nodeType": "ImportDirective",
+        "scope": 1710,
+        "sourceUnit": 100,
+        "src": "27:58:19",
+        "symbolAliases": [
+          {
+            "foreign": 1683,
+            "local": null
+          },
+          {
+            "foreign": 1684,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1686,
+              "name": "Target",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 99,
+              "src": "117:6:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Target_$99",
+                "typeString": "contract Target"
+              }
+            },
+            "id": 1687,
+            "nodeType": "InheritanceSpecifier",
+            "src": "117:6:19"
+          }
+        ],
+        "contractDependencies": [
+          99
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1696,
+        "linearizedBaseContracts": [
+          1696,
+          99
+        ],
+        "name": "SecureTargetMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1694,
+              "nodeType": "Block",
+              "src": "175:22:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1692,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "188:4:19",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1691,
+                  "id": 1693,
+                  "nodeType": "Return",
+                  "src": "181:11:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1695,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "checkInvariant",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1688,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:2:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1691,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1690,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1695,
+                  "src": "169:4:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1689,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "169:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "168:6:19"
+            },
+            "scope": 1696,
+            "src": "128:69:19",
+            "stateMutability": "nonpayable",
+            "superFunction": 98,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1710,
+        "src": "88:111:19"
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1697,
+              "name": "Bounty",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 93,
+              "src": "232:6:19",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Bounty_$93",
+                "typeString": "contract Bounty"
+              }
+            },
+            "id": 1698,
+            "nodeType": "InheritanceSpecifier",
+            "src": "232:6:19"
+          }
+        ],
+        "contractDependencies": [
+          93,
+          1407,
+          1696,
+          1765,
+          1852
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1709,
+        "linearizedBaseContracts": [
+          1709,
+          93,
+          1407,
+          1765,
+          1852
+        ],
+        "name": "SecureTargetBounty",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1707,
+              "nodeType": "Block",
+              "src": "296:40:19",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1704,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "309:20:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_SecureTargetMock_$1696_$",
+                        "typeString": "function () returns (contract SecureTargetMock)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 1703,
+                        "name": "SecureTargetMock",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1696,
+                        "src": "313:16:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_SecureTargetMock_$1696",
+                          "typeString": "contract SecureTargetMock"
+                        }
+                      }
+                    },
+                    "id": 1705,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "309:22:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SecureTargetMock_$1696",
+                      "typeString": "contract SecureTargetMock"
+                    }
+                  },
+                  "functionReturnParameters": 1702,
+                  "id": 1706,
+                  "nodeType": "Return",
+                  "src": "302:29:19"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1708,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "deployContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1699,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:2:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1702,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1701,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1708,
+                  "src": "287:7:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1700,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:9:19"
+            },
+            "scope": 1709,
+            "src": "243:93:19",
+            "stateMutability": "nonpayable",
+            "superFunction": 57,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1710,
+        "src": "201:137:19"
+      }
+    ],
+    "src": "0:339:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-14T07:15:09.986Z"
+}

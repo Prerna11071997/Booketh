@@ -1,0 +1,405 @@
+{
+  "contractName": "NoOwner",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "reclaimToken",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "contractAddr",
+          "type": "address"
+        }
+      ],
+      "name": "reclaimContract",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "reclaimEther",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "from_",
+          "type": "address"
+        },
+        {
+          "name": "value_",
+          "type": "uint256"
+        },
+        {
+          "name": "data_",
+          "type": "bytes"
+        }
+      ],
+      "name": "tokenFallback",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060003414151561005357600080fd5b610848806100626000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806317ffc320146100875780632aed7f3f146100ca5780638da5cb5b1461010d5780639f727c2714610164578063c0ee0b8a1461017b578063f2fde38b146101e0575b34801561008457600080fd5b50005b34801561009357600080fd5b506100c8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610223565b005b3480156100d657600080fd5b5061010b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103a8565b005b34801561011957600080fd5b506101226104e0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017057600080fd5b50610179610505565b005b34801561018757600080fd5b506101de600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291908035906020019082018035906020019190919293919293905050506105d7565b005b3480156101ec57600080fd5b50610221600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105dc565b005b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561028057600080fd5b8173ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050602060405180830381600087803b15801561031b57600080fd5b505af115801561032f573d6000803e3d6000fd5b505050506040513d602081101561034557600080fd5b810190808051906020019092919050505090506103a46000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16828473ffffffffffffffffffffffffffffffffffffffff166107319092919063ffffffff16565b5050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561040557600080fd5b8190508073ffffffffffffffffffffffffffffffffffffffff1663f2fde38b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b1580156104c457600080fd5b505af11580156104d8573d6000803e3d6000fd5b505050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561056057600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f1935050505015156105d557fe5b565b600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561063757600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561067357600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b8273ffffffffffffffffffffffffffffffffffffffff1663a9059cbb83836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156107d457600080fd5b505af11580156107e8573d6000803e3d6000fd5b505050506040513d60208110156107fe57600080fd5b8101908080519060200190929190505050151561081757fe5b5050505600a165627a7a72305820fd1c44c45a279bcf1cbe0016598cbb314e3b49ba436e5bad9e8ad794104f20340029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806317ffc320146100875780632aed7f3f146100ca5780638da5cb5b1461010d5780639f727c2714610164578063c0ee0b8a1461017b578063f2fde38b146101e0575b34801561008457600080fd5b50005b34801561009357600080fd5b506100c8600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610223565b005b3480156100d657600080fd5b5061010b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506103a8565b005b34801561011957600080fd5b506101226104e0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017057600080fd5b50610179610505565b005b34801561018757600080fd5b506101de600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291908035906020019082018035906020019190919293919293905050506105d7565b005b3480156101ec57600080fd5b50610221600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105dc565b005b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561028057600080fd5b8173ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050602060405180830381600087803b15801561031b57600080fd5b505af115801561032f573d6000803e3d6000fd5b505050506040513d602081101561034557600080fd5b810190808051906020019092919050505090506103a46000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16828473ffffffffffffffffffffffffffffffffffffffff166107319092919063ffffffff16565b5050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561040557600080fd5b8190508073ffffffffffffffffffffffffffffffffffffffff1663f2fde38b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff166040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050600060405180830381600087803b1580156104c457600080fd5b505af11580156104d8573d6000803e3d6000fd5b505050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561056057600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f1935050505015156105d557fe5b565b600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561063757600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561067357600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b8273ffffffffffffffffffffffffffffffffffffffff1663a9059cbb83836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b1580156107d457600080fd5b505af11580156107e8573d6000803e3d6000fd5b505050506040513d60208110156107fe57600080fd5b8101908080519060200190929190505050151561081757fe5b5050505600a165627a7a72305820fd1c44c45a279bcf1cbe0016598cbb314e3b49ba436e5bad9e8ad794104f20340029",
+  "sourceMap": "388:63:54:-;;;509:10:55;501:5;;:18;;;;;;;;;;;;;;;;;;982:1:52;969:9;:14;961:23;;;;;;;;388:63:54;;;;;;",
+  "deployedSourceMap": "388:63:54:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;388:63:54;;585:149:47;;8:9:-1;5:2;;;30:1;27;20:12;5:2;585:149:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;480:164:51;;8:9:-1;5:2;;;30:1;27;20:12;5:2;480:164:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;238:20:55;;8:9:-1;5:2;;;30:1;27;20:12;5:2;238:20:55;;;;;;;;;;;;;;;;;;;;;;;;;;;1201:86:52;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1201:86:52;;;;;;634:129:53;;8:9:-1;5:2;;;30:1;27;20:12;5:2;634:129:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;834:169:55;;8:9:-1;5:2;;;30:1;27;20:12;5:2;834:169:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;585:149:47;650:15;654:5:55;;;;;;;;;;;640:19;;:10;:19;;;632:28;;;;;;;;668:5:47;:15;;;684:4;668:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;668:21:47;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;668:21:47;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;668:21:47;;;;;;;;;;;;;;;;650:39;;695:34;714:5;;;;;;;;;;;721:7;695:5;:18;;;;:34;;;;;:::i;:::-;585:149;;:::o;480:164:51:-;552:20;654:5:55;;;;;;;;;;;640:19;;:10;:19;;;632:28;;;;;;;;583:12:51;552:44;;602:12;:30;;;633:5;;;;;;;;;;;602:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;602:37:51;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;602:37:51;;;;480:164;;:::o;238:20:55:-;;;;;;;;;;;;;:::o;1201:86:52:-;654:5:55;;;;;;;;;;;640:19;;:10;:19;;;632:28;;;;;;;;1257:5:52;;;;;;;;;;;:10;;:24;1268:4;:12;;;1257:24;;;;;;;;;;;;;;;;;;;;;;;1250:32;;;;;;1201:86::o;634:129:53:-;750:8;;;834:169:55;654:5;;;;;;;;;;;640:19;;:10;:19;;;632:28;;;;;;;;930:1;910:22;;:8;:22;;;;902:31;;;;;;;;967:8;939:37;;960:5;;;;;;;;;;;939:37;;;;;;;;;;;;990:8;982:5;;:16;;;;;;;;;;;;;;;;;;834:169;:::o;367:120:68:-;456:5;:14;;;471:2;475:5;456:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;456:25:68;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;456:25:68;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;456:25:68;;;;;;;;;;;;;;;;449:33;;;;;;367:120;;;:::o",
+  "source": "pragma solidity ^0.4.18;\n\nimport \"./HasNoEther.sol\";\nimport \"./HasNoTokens.sol\";\nimport \"./HasNoContracts.sol\";\n\n/**\n * @title Base contract for contracts that should not own things.\n * @author Remco Bloemen <remco@2π.com>\n * @dev Solves a class of errors where a contract accidentally becomes owner of Ether, Tokens or\n * Owned contracts. See respective base contracts for details.\n */\ncontract NoOwner is HasNoEther, HasNoTokens, HasNoContracts {\n}\n",
+  "sourcePath": "F:\\smartContract\\crowdsale\\contracts\\ownership\\NoOwner.sol",
+  "ast": {
+    "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/NoOwner.sol",
+    "exportedSymbols": {
+      "NoOwner": [
+        3407
+      ]
+    },
+    "id": 3408,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3397,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:54"
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/HasNoEther.sol",
+        "file": "./HasNoEther.sol",
+        "id": 3398,
+        "nodeType": "ImportDirective",
+        "scope": 3408,
+        "sourceUnit": 3371,
+        "src": "26:26:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/HasNoTokens.sol",
+        "file": "./HasNoTokens.sol",
+        "id": 3399,
+        "nodeType": "ImportDirective",
+        "scope": 3408,
+        "sourceUnit": 3396,
+        "src": "53:27:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/HasNoContracts.sol",
+        "file": "./HasNoContracts.sol",
+        "id": 3400,
+        "nodeType": "ImportDirective",
+        "scope": 3408,
+        "sourceUnit": 3336,
+        "src": "81:30:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3401,
+              "name": "HasNoEther",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3370,
+              "src": "408:10:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HasNoEther_$3370",
+                "typeString": "contract HasNoEther"
+              }
+            },
+            "id": 3402,
+            "nodeType": "InheritanceSpecifier",
+            "src": "408:10:54"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3403,
+              "name": "HasNoTokens",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3395,
+              "src": "420:11:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HasNoTokens_$3395",
+                "typeString": "contract HasNoTokens"
+              }
+            },
+            "id": 3404,
+            "nodeType": "InheritanceSpecifier",
+            "src": "420:11:54"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3405,
+              "name": "HasNoContracts",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3335,
+              "src": "433:14:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HasNoContracts_$3335",
+                "typeString": "contract HasNoContracts"
+              }
+            },
+            "id": 3406,
+            "nodeType": "InheritanceSpecifier",
+            "src": "433:14:54"
+          }
+        ],
+        "contractDependencies": [
+          3164,
+          3335,
+          3370,
+          3395,
+          3463
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Base contract for contracts that should not own things.\n@author Remco Bloemen <remco@2π.com>\n@dev Solves a class of errors where a contract accidentally becomes owner of Ether, Tokens or\nOwned contracts. See respective base contracts for details.",
+        "fullyImplemented": true,
+        "id": 3407,
+        "linearizedBaseContracts": [
+          3407,
+          3335,
+          3395,
+          3164,
+          3370,
+          3463
+        ],
+        "name": "NoOwner",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3408,
+        "src": "388:63:54"
+      }
+    ],
+    "src": "0:452:54"
+  },
+  "legacyAST": {
+    "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/NoOwner.sol",
+    "exportedSymbols": {
+      "NoOwner": [
+        3407
+      ]
+    },
+    "id": 3408,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3397,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:54"
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/HasNoEther.sol",
+        "file": "./HasNoEther.sol",
+        "id": 3398,
+        "nodeType": "ImportDirective",
+        "scope": 3408,
+        "sourceUnit": 3371,
+        "src": "26:26:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/HasNoTokens.sol",
+        "file": "./HasNoTokens.sol",
+        "id": 3399,
+        "nodeType": "ImportDirective",
+        "scope": 3408,
+        "sourceUnit": 3396,
+        "src": "53:27:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/F/smartContract/crowdsale/contracts/ownership/HasNoContracts.sol",
+        "file": "./HasNoContracts.sol",
+        "id": 3400,
+        "nodeType": "ImportDirective",
+        "scope": 3408,
+        "sourceUnit": 3336,
+        "src": "81:30:54",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3401,
+              "name": "HasNoEther",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3370,
+              "src": "408:10:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HasNoEther_$3370",
+                "typeString": "contract HasNoEther"
+              }
+            },
+            "id": 3402,
+            "nodeType": "InheritanceSpecifier",
+            "src": "408:10:54"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3403,
+              "name": "HasNoTokens",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3395,
+              "src": "420:11:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HasNoTokens_$3395",
+                "typeString": "contract HasNoTokens"
+              }
+            },
+            "id": 3404,
+            "nodeType": "InheritanceSpecifier",
+            "src": "420:11:54"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3405,
+              "name": "HasNoContracts",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3335,
+              "src": "433:14:54",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_HasNoContracts_$3335",
+                "typeString": "contract HasNoContracts"
+              }
+            },
+            "id": 3406,
+            "nodeType": "InheritanceSpecifier",
+            "src": "433:14:54"
+          }
+        ],
+        "contractDependencies": [
+          3164,
+          3335,
+          3370,
+          3395,
+          3463
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Base contract for contracts that should not own things.\n@author Remco Bloemen <remco@2π.com>\n@dev Solves a class of errors where a contract accidentally becomes owner of Ether, Tokens or\nOwned contracts. See respective base contracts for details.",
+        "fullyImplemented": true,
+        "id": 3407,
+        "linearizedBaseContracts": [
+          3407,
+          3335,
+          3395,
+          3164,
+          3370,
+          3463
+        ],
+        "name": "NoOwner",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3408,
+        "src": "388:63:54"
+      }
+    ],
+    "src": "0:452:54"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-13T21:33:30.181Z"
+}
